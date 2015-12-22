@@ -1,0 +1,111 @@
+@import "bourbon";
+
+@import "grid-settings";
+
+@import "neat";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  @include outer-container(100%);
+
+  .app-bar {
+    @include span-columns(12);
+    margin-bottom: $gutter;
+  }
+
+  #alpha, #beta, #gamma, #delta, #epsilon, #zeta, #eta, #theta {
+    margin-bottom: $gutter;
+  }
+
+  @include media($mobile) {
+    #alpha, #beta, #gamma {
+      display: none;
+    }
+    #delta {
+      @include span-columns(4);
+      @include omega;
+    }
+    #epsilon {
+      @include span-columns(4);
+      @include omega;
+    }
+    #zeta {
+      @include span-columns(4);
+      @include omega;
+    }
+    #eta {
+      @include span-columns(4);
+      @include omega;
+    }
+    #theta {
+      @include span-columns(4);
+      @include omega;
+    }
+  }
+
+  @include media($tablet) {
+    #alpha {
+      @include span-columns(4);
+    }
+    #beta {
+      @include span-columns(4);
+      @include omega;
+    }
+    #gamma {
+      @include span-columns(4);
+    }
+    #delta {
+      @include span-columns(4);
+      @include omega;
+    }
+    #epsilon {
+      @include span-columns(8);
+      @include omega;
+    }
+    #zeta {
+      @include span-columns(8);
+      @include omega;
+    }
+    #eta {
+      @include span-columns(4);
+    }
+    #theta {
+      @include span-columns(4);
+      @include omega;
+    }
+  }
+
+  @include media($desktop) {
+    #alpha {
+      @include span-columns(4);
+    }
+    #beta {
+      @include span-columns(4);
+    }
+    #gamma {
+      @include span-columns(4);
+      @include omega;
+    }
+    #delta {
+      @include span-columns(6);
+    }
+    #epsilon {
+      @include span-columns(6);
+      @include omega;
+    }
+    #zeta {
+      @include span-columns(12);
+      @include omega;
+    }
+    #eta {
+      @include span-columns(4);
+    }
+    #theta {
+      @include span-columns(8);
+      @include omega;
+    }
+  }
+}

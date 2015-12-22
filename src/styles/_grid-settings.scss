@@ -1,0 +1,14 @@
+@import "neat-helpers";
+
+$max-width: 100% !global;
+$grid-columns: 12 !global;
+
+$smallest: 480px;
+$smaller: 768px;
+
+$mobile: new-breakpoint(max-width $smallest 4);
+$tablet: new-breakpoint(min-width $smallest + 1 max-width $smaller 8);
+$desktop: new-breakpoint(min-width $smaller + 1 12);
+
+$visual-grid: true !global;
+$visual-grid-color: #c4b0b0 !global;
