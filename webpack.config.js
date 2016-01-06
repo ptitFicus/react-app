@@ -50,7 +50,7 @@ module.exports = {
         loaders: ['babel']
       }, {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract(['css', 'sass'])
+        loaders: [ 'style', 'css?sourceMap', 'sass?sourceMap' ]
       }
     ]
   },
