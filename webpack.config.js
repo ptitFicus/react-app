@@ -49,7 +49,7 @@ module.exports = {
         exclude: /node_modules/,
         loaders: ['babel']
       }, {
-        test: /\.scss$/,
+        test: /\.scss|\.css$/,
         loaders: [ 'style', 'css?sourceMap', 'sass?sourceMap' ]
       }
     ]
