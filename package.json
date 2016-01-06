@@ -6,7 +6,7 @@
   "main": "src/main.js",
   "scripts": {
     "lint": "eslint src tests",
-    "test": "set NODE_ENV=test && mocha --compilers js:babel/register tests/index.js",
+    "test": "export NODE_ENV=production && mocha --compilers js:babel/register,:style-and-images-compiler.js tests/index.js",
     "start": "node server.js",
     "build": "npm run test && npm run lint && npm run build-singlefile",
     "build-singlefile": "webpack -p  --colors --progress --config webpack.production.js",
