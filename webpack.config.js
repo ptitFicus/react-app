@@ -51,6 +51,12 @@ module.exports = {
       }, {
         test: /\.scss|\.css$/,
         loaders: [ 'style', 'css?sourceMap', 'sass?sourceMap' ]
+      }, {
+        test: /\.png|svg$/,
+        loader: 'url-loader?limit=100000'
+      }, {
+        test: /\.jpg$/,
+        loader: 'file-loader'
       }
     ]
   },
